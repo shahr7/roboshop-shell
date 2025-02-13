@@ -5,7 +5,6 @@ dnf install nodejs -y
 useradd roboshop
 mkdir /app
 
-rm -rf /tmp/user.zip
 curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user-v3.zip
 cd /app
 unzip /tmp/user.zip
