@@ -1,4 +1,5 @@
 cp shipping.service /etc/systemd/system/shipping.service
+
 dnf install maven -y
 useradd roboshop
 rm -rf /app
@@ -20,7 +21,7 @@ systemctl start shipping
 
 dnf install mysql -y
 
-mysql -h mysql-dev.azdevops87.online:8080 -uroot -pRoboShop@1 < /app/db/schema.sql
+mysql -h mysql-dev.azdevops87.online -uroot -pRoboShop@1 < /app/db/schema.sql
 mysql -h mysql-dev.azdevops87.online -uroot -pRoboShop@1 < /app/db/app-user.sql
 mysql -h mysql-dev.azdevops87.online -uroot -pRoboShop@1 < /app/db/master-data.sql
 
